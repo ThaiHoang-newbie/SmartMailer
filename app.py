@@ -114,7 +114,7 @@ with tab2:
                 with open(template_path, 'wb') as f:
                     f.write(template_file.getbuffer())
                 
-                st.image(template_file, caption="Template Image", use_container_width=True)
+                st.image(template_file, caption="Template Image", width=None)
         
         with col2:
             st.subheader("Text Settings")
@@ -170,7 +170,7 @@ with tab2:
             cols = st.columns(3)
             for idx, (key, img_path) in enumerate(list(st.session_state.generated_images.items())[:6]):
                 with cols[idx % 3]:
-                    st.image(img_path, caption=key, use_container_width=True)
+                    st.image(img_path, caption=key, width=None)
     else:
         st.info("👆 Please import an Excel file first in the 'Import Data' tab.")
 
