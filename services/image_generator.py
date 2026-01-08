@@ -45,10 +45,10 @@ class ImageGenerator:
             color_rgb = self._hex_to_rgb(color)
             
             # Draw name
-            draw.text(name_pos, f"Name: {name}", fill=color_rgb, font=font)
+            draw.text(name_pos, f"{name}", fill=color_rgb, font=font)
             
             # Draw date
-            draw.text(date_pos, f"Date: {date}", fill=color_rgb, font=font)
+            draw.text(date_pos, f"{date}", fill=color_rgb, font=font)
             
             # Save image
             output_filename = f"{name.replace(' ', '_')}_{date.replace('/', '-').replace(', ', '_')}.png"
